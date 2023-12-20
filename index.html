@@ -7,7 +7,8 @@
 </head>
 <body>
     <div id="app">
-        <ul>
+        <ul v-show="emails.length == 10"> <!-- BONUS: con l'utilizzo del v-show, mostro la lista solo quando gli indirizzi email sono stati generati tutti -->
+            
             <!-- tramite un v-for, stampo nel DOM gli indirizzi email presenti nell'array generata con l'API fornita -->
             <li v-for="(email, index) in emails" :key="index">
                 {{emails[index]}}
